@@ -5,19 +5,15 @@
   <title>Mátyásföldi Ministránsok</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- OneSignal SDK -->
-  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-  <script>
-    window.OneSignal = window.OneSignal || [];
-    OneSignal.push(function() {
-      OneSignal.init({
-        appId: "4d0f562a-e3dd-45e0-8e2a-f119bc1014a6",
-        notifyButton: {
-          enable: true,
-        }
-      });
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "4d0f562a-e3dd-45e0-8e2a-f119bc1014a6",
     });
-  </script>
+  });
+</script>
 
   <style>
     body {
